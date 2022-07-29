@@ -1,0 +1,564 @@
+:root {
+    --white: #f2f2f2;
+    --gray-1: #666666;
+    --gray-2: #4d4d4d;
+    --gray-3: #333333;
+    --gray-4: #191919;
+    --black: #000000;
+    --red: #D50000;
+    --less-red: #D56868;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    color: var(--white);
+}
+
+html {
+    font-size: 12px;
+    width: 100vw;
+    height: 100%;
+}
+
+.container {
+    min-width: 660px;
+    width: 100vw;
+    height: 100%;
+    background-color: var(--gray-4);
+}
+
+.container > * {
+    /* border: 1px solid black; */
+    margin: 0rem auto;
+}
+
+.main {
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+    min-width: 55rem;
+    max-width: 1200px;
+}
+
+/* ESTILOS PARA INDEX.HTML */
+
+/* HEADER */
+
+.top-header {
+    display: block;
+    margin: 0rem;
+    background-color: #333333;
+    text-align: right;
+    padding: 0.3rem 3rem;
+    font-size: 1.3rem;
+    
+}
+
+.header {
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 10rem;
+    padding: 0rem 3rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 8rem;
+    margin: 1rem;
+}
+
+.navbar {
+    margin-bottom: 1rem;
+}
+
+.navbar ul {
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+
+.navbar ul li {
+    font-size: 1.3rem;
+    text-decoration: none;
+    list-style-type: none;
+    padding: 0.8rem;
+    border: 2px solid var(--red);
+    margin: 0.5rem;
+    border-radius: 1rem;
+}
+
+.navbar ul li:hover {
+background-color: var(--gray-1);
+}
+
+.navbar ul li a {
+    text-decoration: none;
+}
+
+/* BIENVENIDO */
+
+.welcome {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+.welcome img {
+    min-width: 35%;
+    max-width: 90%;
+    max-height: 90%;
+    margin: 0.5rem;
+}
+
+.welcome_text {
+    min-width: 15rem;
+    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome_text > * {
+    text-align: center;
+    line-height: 140%;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    
+}
+
+.video-intro {
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*TODO TIPO DE EVENTOS*/
+
+.events-title {
+    margin: 1rem auto 2rem auto;
+}
+.events-title h3 {
+    font-size: 1.3rem;
+}
+
+.events-cards > * {
+    border: 1px solid black;
+    margin: 0.7rem;
+}
+
+.events-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.cards {
+    background-color: black;
+    margin: 0.5rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+.cards img {
+    width: 13rem;
+}
+
+.cards img:hover {
+    opacity: 0.60;
+}
+
+.cards a {
+    text-decoration: none;
+}
+
+.cards h4 {
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+    color: white;
+}
+
+/*FOOTER*/
+
+.footer {
+    background-color: var(--gray-1);
+    height: 7rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*LEFT FOOTER + RIGHT FOOTER*/
+
+.left-footer, .right-footer {
+    width: 200px;
+    text-align: center;
+}
+
+.left-footer *, .right-footer * {
+    display: block;
+}
+
+.left-footer h5, .right-footer h5 {
+    margin-bottom: 0.8rem;
+    
+}
+
+.left-footer p, .right-footer p {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+}
+
+/* CENTER FOOTER */
+
+.social-media {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.5rem;
+}
+
+.social-media i {
+font-size: 30px;
+}
+
+/* RESPONSIVE INDEX */
+
+@media (max-width:1024px) {
+    .cards {
+        margin: 1.8rem;
+    }
+    .cards img {
+        width: 15rem;
+    }
+    .welcome_text > * {
+        font-size: 1.2rem;
+    }
+    .navbar ul li{
+        font-size: 1.2rem
+    }
+}
+
+@media (max-width:768px) {
+    html {
+        font-size: 16px;
+        width: 100vw;
+        height: 100%;
+    }
+
+    .top-header {
+        font-size: 1rem;
+    }
+
+    .main {
+        min-width: 40rem;
+        max-width: 100vw;
+    }
+    
+    .navbar ul li{
+        font-size: 0.9rem
+    }
+
+    .main h3 {
+        text-align: center;
+        margin: 1.5rem 3rem
+    }
+
+    .cards {
+        margin: 1.5rem;
+    }
+    .cards img {
+        width: 16rem;
+    }   
+    .welcome {
+    flex-wrap: wrap;
+    }
+    .welcome img {
+     max-width: 40%;
+     margin: 3rem 0rem;
+    }
+    .welcome_text {
+     order: 2;
+     max-width: 70%;
+    }
+    .footer {
+    
+        height: 23rem;
+        display: block;
+        text-align: center;
+        padding-top: 2rem;
+    }
+    
+    .left-footer, .right-footer {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    
+    .left-footer h5, .right-footer h5 {
+        margin-bottom: 0.8rem;
+        font-size: 1.5rem;
+    }
+    
+    .left-footer p, .right-footer p {
+        font-size: 1.2rem;
+        margin-bottom: 0.2rem;
+        width: 100%;
+    }
+    
+    .social-media {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .social-media i {
+    font-size: 30px;
+    margin: 0 1.5rem;
+    }
+    .center-footer h4 {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+
+/* ESTILOS PARA SERVICIOS.HTML */
+
+/* VISIBLE */
+
+.main-servicios {
+    margin: 2.5rem auto 2.5rem auto;
+    max-width: 1200px;
+}
+
+.robot-service, .fullphotobooth-service {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.robot-service *, .fullphotobooth-service * {
+    margin: 0.5rem 0;
+}
+
+.robot-section_visible_preview, .fullphotobooth-section_visible_preview {
+    display: flex;
+    justify-content: space-between;
+}
+
+.robot-section_visible_preview *, .fullphotobooth-section_visible_preview * {
+    margin: 0 1rem;
+    width: 50%;
+}
+.robot-section_visible h3, .fullphotobooth-section_visible h3 {
+    background-color: var(--red);
+    padding: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.robot-section_visible_preview_info, .fullphotobooth-section_visible_preview_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.robot-section_visible_preview_info p, .fullphotobooth-section_visible_preview_info p {
+    width: 100%;
+    line-height: 160%;
+    text-align: justify;
+    font-size: 1.3rem;
+    
+}
+.robot-section_visible_preview_info button, .fullphotobooth-section_visible_preview_info button {
+    width: 80%;
+    background-color: var(--red);
+    padding: 0.5rem;
+}
+.robot-section_visible_preview_info button:hover, .fullphotobooth-section_visible_preview_info button:hover {
+    background-color: var(--less-red);
+}
+
+/* INVISIBLE */
+
+.robot-section_invisible, .fullphotobooth-section_invisible {
+    margin-top: 3rem;
+    justify-content: space-between;
+}
+.robot-section_invisible *, .fullphotobooth-section_invisible * {
+    margin: 0 1rem;
+    width: 50%;
+}
+.robot-section_invisible_photos img, .fullphotobooth-section_invisible_photos img {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.robot_section_invisible_moreinfo, .fullphotobooth_section_invisible_moreinfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    flex-direction: column;
+}
+
+.robot-section_invisible_moreinfo_text, .fullphotobooth-section_invisible_moreinfo_text {
+    width: 100%;
+}
+
+.robot-section_invisible_moreinfo_text *, .fullphotobooth-section_invisible_moreinfo_text * {
+    width: 100%;
+    line-height: 160%;
+    text-align: justify;
+    hyphens: auto;
+    padding-right: 1.5rem;
+    
+}
+.robot-section_invisible_moreinfo_text h4, .fullphotobooth-section_invisible_moreinfo_text h4 {
+    margin-top: 2rem;
+}
+.robot-section_invisible_moreinfo_text li, .fullphotobooth-section_invisible_moreinfo_text li {
+    margin-top: 1rem;
+    padding-left: 0rem;
+}
+.robot-section_invisible_moreinfo_text li span, .fullphotobooth-section_invisible_moreinfo_text li span {
+    margin-left: 0rem;
+    margin-top: 2rem;
+    font-weight: 600;
+}
+
+.robot-section_invisible_moreinfo button, .fullphotobooth-section_invisible_moreinfo button {
+    display: inline;
+    margin-top: 4rem;
+    width: 80%;
+    background-color: var(--red);
+    padding: 0.5rem;
+}
+.robot-section_invisible_moreinfo button:hover, .fullphotobooth-section_invisible_moreinfo button:hover {
+    background-color: var(--less-red);
+}
+
+/* RESPONSIVE SERVICIOS*/
+
+@media (max-width:1024px) {
+    .robot-section_visible_preview, .fullphotobooth-section_visible_preview {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:768px) {
+    .robot-section_visible_preview, .fullphotobooth-section_visible_preview {
+        flex-direction: column;
+    }
+    .robot-section_visible_preview p, .fullphotobooth-section_visible_preview p {
+        margin: 1rem 0;
+    }
+    .robot-section_visible_preview *, .fullphotobooth-section_visible_preview * {
+        width: 90%;
+    }
+    .robot-section_invisible *, .fullphotobooth-section_invisible * {
+        margin: 0 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+
+
+/* ESTILOS PARA NOSOTROS.HTML */
+
+.main-nosotros{
+    margin: 2.5rem auto 2.5rem auto;
+
+    max-width: 1200px;
+}
+
+.title {
+    background-color: var(--red);
+    padding: 0.8rem;
+    margin-bottom: 2.5rem;
+}
+
+
+.team {
+    width: 100%;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.team * {
+    width: 100%;
+    max-width: 90%;
+    padding: 1rem;
+}
+
+.team p {
+margin-top: 3rem;
+text-align: justify;
+hyphens: auto;
+line-height: 200%;
+font-size: 1.3rem;
+width: 80%;
+}
+
+/* RESPONSIVE NOSOTROS */
+
+@media (max-width:1024px) {
+    .team p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:768px) {
+    .team p {
+        font-size: 1.3rem;
+        margin-top: 0;
+    }
+    .team {
+    grid-template-columns: 1fr;
+    }
+    
+    .team p:nth-child(3) {
+        grid-row: 4;
+    }
+    .team p:nth-child(6) {
+        grid-row: 8;
+    }
+}
+
+
+
+
+
+
+/* ESTILOS PARA COTIZADOR.HTML */
+
+.main-cotizador {
+    max-width: 1200px;
+    height: 100vh;
+}
+.oops {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.oops img {
+    width: 30%;
+}
+.oops h5 {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+}

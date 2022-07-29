@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TU GRAN FIESTA</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="top-header">"... desde 2014 alegrando los mejores momentos de tu vida."</div>
+        <header class="header">
+            <img class="logo" src="./Assets/logo.svg" alt="Logo Tu Gran Fiesta">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="./index.html">INICIO</a></li>
+                    <li><a href="./nosotros.html">NOSOTROS</a></li>
+                    <li><a href="./servicios.html">SERVICIOS</a></li>
+                    <li><a href="./cotizador.html">COTIZADOR</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main-servicios">
+            <article class="robot-service">
+                <section class="robot-section_visible">
+                    <h3>ROBOT LED</h3>
+                    <div class="robot-section_visible_preview">
+                        <video src="./Assets/servicios/robot-video.mp4#t=5" preload="auto" controls></video>
+                        <div class="robot-section_visible_preview_info">
+                            <p>Consta de una persona que lleva colocado un llamativo traje de robot cubierto de luces led que cambian de colores.<br><br>
+                            Es un show muy divertido y dinámico ya que el robot bailará música actual (todos los géneros) y hará participar a chicos y grandes, además de que puede moverse sin ninguna limitación.</p>
+                            <button id="r-more-info-button" style="display:inline" onclick="moreRobotInfo()">Más Info...</button>
+                        </div>                        
+                    </div>
+                </section>
+                <section class="robot-section_invisible" id="robot-invisible-section" style="display:none">
+                    <div class="robot-section_invisible_photos">
+                        <img src="./Assets/servicios/robot-foto-1.jpg" alt="Robot led en casamiento con los novios">
+                        <img src="./Assets/servicios/robot-foto-2.jpg" alt="Robot led en 15 años con quinceañera">
+                        <img src="./Assets/servicios/robot-foto-3.jpg" alt="Robot led en cumple infantil con los invitados">
+                    </div>
+                    <div class="robot-section_invisible_moreinfo">
+                        <div class="robot-section_invisible_moreinfo_text">
+                            <p>Nuestro robot es de FABRICACIÓN PROPIA, no vas a encontrar otro igual:<br></p>
+                            <ul>
+                                <li>Está construido completamente de fibra de vidio (No lleva casco de moto ni piezas de tela)</li>
+                                <li>En el pecho tiene una pantalla 7" hd, personalizable a tu gusto.</li>
+                                <li>Su altura es de 1.80mts. (NO LLEVA ZANCOS) lo cual le permite una gran movilidad y mejor interacción con tus invitados</li>
+                                <li>Baila todos los géneros, nuestro show no es solo musica electrónica.</li>
+                            </ul>
+                            <h4>15 AÑOS - CASAMIENTOS - CUMPLEAÑOS - EGRESADOS:</h4>
+                            <ul>
+                                <li><span>Duración:</span></li>
+                                <p>30 min. bailando, ocasionalmente recorre algunas mesas sacandose fotos con quienes estan sentados.</p>
+                                <li><span>Pistola de CO2:</span></li>
+                                <p>Ya incluida, Solo para uso exclusivo del robot.</p>
+                                <li><span>Música:</span></li>
+                                <p>La elegida por el DJ, caso contrario podemos llevar un enganchado en pendrive</p>
+                            </ul>
+                            <h4>CUMPLEAÑOS INFANTILES:</h4>
+                            <ul>
+                                <li><span>Duración:</span></li>
+                                <p>20 min. bailando + 10min. sacandose fotos con todos los chicos (En grupo e individualmente).</p>
+                                <li><span>Pistola de CO2:</span></li>
+                                <p>Ya incluida, Solo para uso exclusivo del robot.</p>
+                                <li><span>Música:</span></li>
+                                <p>Llevamos un enganchado en pendrive</p>
+                            </ul>
+                        </div>
+                        <button onclick="lessRobotInfo()">Menos Info...</button>
+                    </div>
+                </section>
+            </article>
+            <article class="fullphotobooth-service">
+                <section class="fullphotobooth-section_visible">
+                    <h3>FOTOCABINA FULL LED</h3>
+                    <div class="fullphotobooth-section_visible_preview">
+                        <video src="./Assets/servicios/fotocabina-fullled-video.mp4#t=9" preload="auto" controls></video>
+                        <div class="fullphotobooth-section_visible_preview_info">
+                            <p>La Fotocabina es muy utilizada como reemplazo de los souvenirs: Los invitados la utilizan por 2hs y mientras se divierten se llevan EN EL ACTO una foto IMPRESA como souvenir (con el diseño que desee el cliente).<br><br>
+                            Esta cabina se llama "Full Led" por estar iluminada completamente por luces led que cambian de colores (incluidas las cortinas).</p>
+                            <button id="full-more-info-button" style="display:inline" onclick="moreFullLedInfo()">Más Info...</button>
+                        </div>                        
+                    </div>
+                </section>
+                <section class="fullphotobooth-section_invisible" id="full-invisible-section" style="display:none">
+                    <div class="fullphotobooth-section_invisible_photos">
+                        <img src="./Assets/servicios/fullled-foto-1.jpg" alt="Fotocabina por fuera iluminada">
+                        <img src="./Assets/servicios/fullled-foto-2.jpg" alt="Fotocabina por dentro iluminada">
+                        <img src="./Assets/servicios/fullled-foto-3.jpg" alt="Invitados sacandose fotos dentro de fotocabina">
+                    </div>
+                    <div class="fullphotobooth-section_invisible_moreinfo">
+                        <div class="fullphotobooth-section_invisible_moreinfo_text">
+                            <p>Nuestra fotocabina full led es unica en su tipo, porque:<br></p>
+                            <ul>
+                                <li>Está construida totalmente en plástico blanco que se ilumina por dentro de todos colores.</li>
+                                <li>En su pantalla de 20" tus invitados pueden verse cómodamente mientras se sacan las fotos.</li>
+                                <li>Es muy fácil de usar, solo deben elegir cotillón, apretar un boton y sonreir!!.</li>
+                                <li>En su interior hay mucho espacio, hasta 10 invitados pueden sacarse juntos una foto grupal.</li>
+                            </ul>
+                            <h4>CARACTERÍSTICAS DEL SERVICIO:</h4>
+                            <ul>
+                                <li><span>Duración:</span></li>
+                                <p>Se puede contratar por 2hs o por 3hs</p>
+                                <li><span>Cotillón:</span></li>
+                                <p>Incluido de tipo premium (Gorros, pelucas, máscaras y emojis).</p>
+                                <li><span>Diseño de foto:</span></li>
+                                <p>Es personalizado con el fondo que desees y la cantidad de fotos que mas te guste.</p>
+                            </ul>
+                        </div>
+                        <button onclick="lessFullLedInfo()">Menos Info...</button>
+                    </div>
+                </section>
+            </article>
+        </main>
+        <footer class="footer">
+            <div class="left-footer">
+                <h5>NUESTRA SEDE</h5>
+                <p>Nos encontramos en Córdoba, Argentina<br> 
+                    pero viajamos a todo el país.</p>
+            </div>
+            <div class="center-footer">
+                <h4>VISITÁ NUESTRAS REDES SOCIALES:</h4>
+                <div class="social-media">
+                    <a href="https://www.instagram.com/tugranfiesta/">
+                        <i class='bx bxl-instagram-alt'></i>
+                    </a>
+                    <a href="https://www.facebook.com/tugranfiestacba1">
+                        <i class='bx bxl-facebook-circle'></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCxOpZVan2nABg8GLv74N-xg">
+                        <i class='bx bxl-youtube'></i>
+                    </a>
+                </div>
+            </div>
+            <div class="right-footer">
+                <h5>CONTACTO</h5>
+                <p>danilo9307@gmail.com</p>
+                <p>Whatsapp: +54 351 563-2189</p>
+            </div>
+        </footer>
+    </div>
+    <script src="./servicios.js"></script>
+</body>
+</html>
