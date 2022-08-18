@@ -2,6 +2,7 @@ function moreRobotInfo() {
 
     document.getElementById("r-more-info-button").style.display = "none";
     document.getElementById("robot-invisible-section").style.display = "flex";
+    document.getElementById("robot-invisible-section").style.flexWrap =  "wrap";
 };
 
 function lessRobotInfo() {
@@ -14,6 +15,7 @@ function moreFullLedInfo() {
 
     document.getElementById("full-more-info-button").style.display = "none";
     document.getElementById("full-invisible-section").style.display = "flex";
+    document.getElementById("full-invisible-section").style.flexWrap =  "wrap";
 };
 
 function lessFullLedInfo() {
